@@ -60,9 +60,9 @@ class BeachRockMapApp {
                 attribution: '© Esri',
                 maxZoom: 19
             }),
-            "CartoDB Positron": L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-                attribution: '© OpenStreetMap, © CartoDB',
-                maxZoom: 19
+            "OpenFreeMap Positron": L.maplibreGL({
+                style: 'https://tiles.openfreemap.org/styles/positron',
+                attribution: 'OpenFreeMap © OpenMapTiles Data from OpenStreetMap'
             }),
             "CartoDB Dark": L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
                 attribution: '© OpenStreetMap, © CartoDB',
@@ -70,7 +70,7 @@ class BeachRockMapApp {
             })
         };
         
-        baseMaps["CartoDB Positron"].addTo(this.map);
+        baseMaps["OpenFreeMap Positron"].addTo(this.map);
         
         L.control.layers(baseMaps, null, {
             position: 'topright',
