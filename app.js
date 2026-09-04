@@ -39,6 +39,7 @@ class BeachRockMapApp {
         this.map = L.map('map', {
             preferCanvas: false,
             zoomControl: true,
+            maxZoom: 19,
             attributionControl: true,
             renderer: L.svg({ padding: 0.5 }),
             zoomAnimation: true,
